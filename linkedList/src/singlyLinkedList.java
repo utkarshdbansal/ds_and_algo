@@ -99,6 +99,26 @@ public class singlyLinkedList {
             previous.next = current.next;
         }
     }
+    public ListNode getMiddleNode(){
+        if(head == null){
+            return null;
+        }
+        ListNode slowPtr = head;
+        ListNode fastPtr = head;
+        while(fastPtr != null && fastPtr.next != null){
+            slowPtr = slowPtr.next;
+            fastPtr = fastPtr.next.next;
+        }
+        return slowPtr;
+    }
+//    public ListNode getNthNodeFromEnd(int n){
+//        if(head == null){
+//            return null;
+//        }
+//        if(n<=0){
+//            throw new illegalArguementException("Invalid")
+//        }
+//    }
     public void add(int e){
         insert(head,e);
     }
@@ -120,17 +140,20 @@ public class singlyLinkedList {
         sll.head.next = second;
         second.next = third;
         third.next = fourth;
-        //sll.insertFirst(9);
-       // sll.insertLast(12);
-        sll.add(100);
+//        //sll.insertFirst(9);
+//       // sll.insertLast(12);
+//        sll.add(100);
         sll.display();
-//        sll.deleteFirst();
-        sll.display();
-//        sll.deleteLast();
-        sll.display();
-        sll.insert(1,4);
-        sll.display();
-        sll.delete(4);
-        sll.display();
+////        sll.deleteFirst();
+//        sll.display();
+////        sll.deleteLast();
+//        sll.display();
+//        sll.insert(1,4);
+//        sll.display();
+//        sll.delete(4);
+//        sll.display();
+        sll.getMiddleNode();
+        ListNode middleNode = sll.getMiddleNode();
+        System.out.println("Middle Node is "+middleNode.data);
     }
 }
