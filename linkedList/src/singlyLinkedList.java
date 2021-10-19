@@ -119,6 +119,20 @@ public class singlyLinkedList {
 //            throw new illegalArguementException("Invalid")
 //        }
 //    }
+    public void removeDuplicates(){
+        if(head == null){
+            return;
+        }
+        ListNode current = head;
+        while (current!= null && current.next!=null){
+            if(current.data == current.next.data){
+                current.next = current.next.next;
+            }
+            else {
+                current = current.next;
+            }
+        }
+    }
     public void add(int e){
         insert(head,e);
     }
@@ -137,12 +151,15 @@ public class singlyLinkedList {
         ListNode third = new ListNode(8);
         ListNode fourth = new ListNode(11);
 
+
         sll.head.next = second;
         second.next = third;
         third.next = fourth;
 //        //sll.insertFirst(9);
-//       // sll.insertLast(12);
+        sll.insertLast(11);
 //        sll.add(100);
+        sll.display();
+        sll.removeDuplicates();
         sll.display();
 ////        sll.deleteFirst();
 //        sll.display();
@@ -152,8 +169,8 @@ public class singlyLinkedList {
 //        sll.display();
 //        sll.delete(4);
 //        sll.display();
-        sll.getMiddleNode();
-        ListNode middleNode = sll.getMiddleNode();
-        System.out.println("Middle Node is "+middleNode.data);
+//        sll.getMiddleNode();
+//        ListNode middleNode = sll.getMiddleNode();
+//        System.out.println("Middle Node is "+middleNode.data);
     }
 }
