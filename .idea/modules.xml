@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/circularLinkedList/circularLinkedList.iml" filepath="$PROJECT_DIR$/circularLinkedList/circularLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/doubly LinkedList/doubly LinkedList.iml" filepath="$PROJECT_DIR$/doubly LinkedList/doubly LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/ds_and_algo.iml" filepath="$PROJECT_DIR$/ds_and_algo.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkedList/linkedList.iml" filepath="$PROJECT_DIR$/linkedList/linkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stack/stack.iml" filepath="$PROJECT_DIR$/stack/stack.iml" />
     </modules>
   </component>
 </project>
