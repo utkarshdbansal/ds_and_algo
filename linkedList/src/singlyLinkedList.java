@@ -133,6 +133,52 @@ public class singlyLinkedList {
             }
         }
     }
+    // Q-> How to search an element in a linkedlist?
+    // Q-> Reverse a linked list.
+    public boolean containsLoop(){
+        ListNode fastptr = head;
+        ListNode slowptr = head;
+        while(fastptr!= null && fastptr.next!=null){
+            fastptr = fastptr.next.next;
+            slowptr = slowptr.next;
+            if(fastptr == slowptr){
+                return true;
+            }
+        }
+        return false;
+    }
+    // method to create a loop in list
+    public void aLoopInLinkedList(){
+        ListNode first = new ListNode(1);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(3);
+        ListNode fourth = new ListNode(4);
+        ListNode fifth = new ListNode(5);
+        ListNode sixth = new ListNode(6);
+        head = first;
+        first.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
+        fifth.next = sixth;
+        sixth.next = third;
+    }
+    public ListNode reverse(ListNode head){
+        if (head == null){
+            return head;
+        }
+        ListNode current = head;
+        ListNode previous = null;
+        ListNode next = null;
+        while(current != null){
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = current.next;
+        }
+        return previous;
+    }
+//    public boolean searchElement(int data)
     public void add(int e){
         insert(head,e);
     }
@@ -159,7 +205,9 @@ public class singlyLinkedList {
         sll.insertLast(11);
 //        sll.add(100);
         sll.display();
-        sll.removeDuplicates();
+//        sll.removeDuplicates();
+//        sll.reverse(sll.head);
+//        sll.aLoopInLinkedList();
         sll.display();
 ////        sll.deleteFirst();
 //        sll.display();
