@@ -56,7 +56,7 @@ Nodes D, I, J, F, K and H
 9) Level: In a tree, each step from top to bottom is called as level of a tree.
 The level count starts with 0 by default and increments by 1 at each level or step.
 
-10) Height: Total number of edges thet lies on the longest path from any leaf node to a particular node is called as height of a tree.
+10) Height: Total number of edges that lies on the longest path from any leaf node to a particular node is called as height of a tree.
 Height of a tree is the height of root node.
 Height of all leaf nodes = 0
 
@@ -75,4 +75,71 @@ Unlabeled Binary tree:
 a binary tree is unlabeled if its nodes are not assigned any label.
 
 Number of different binary trees possible with 'n' unlabelled nodes =
+
+labelled Binary tree:
+
+
+
+
+types of bujnary tree:
+Full/strictly
+perfect
+complete
+skewed
+rooted
+
+1) Rooted binary tree: is a binary tree that satisfies the following 2 properties
+it has a root node
+each node has at most 2 children
+
+2) Full/ strictly binary tree: A binary tree in which every node has either 0 or 2 children is called Full binary tree.
+full binary tree is also called as Strictly binary tree.
+First binary tree is not a full because node C has only 1 child.
+
+3) Perfect Binary tree: is a binary tree that satisfies the following 2 properties:
+Every internal node has exactly 2 children.
+all the leaf nodes are at the same level.
+
+4) Complete binary tree: is a binary tree that satisfies the following 2 properties:
+all the levels are completely filled except possibly the last level
+the last level must be strictly filled from left to right.
+
+5) skewed binary tree: is a binary tree that satisfies the following 2 properties:
+all the nodes except one node has one and only one child. The remaining node has no child
+OR
+A skewed tree is a binary tree of a nodes such that its depth is (n-1).
+
+Binary tree traversal:
+tree traversal refers to the process of visiting each node in a tree data structure exactly once.
+techniques:
+---depth first traversal
+-- preorder traversal
+--  inorder traversal
+-- postorder traversal
+--- breath first traversal
+
+1) pre order
+algo:
+-- visit the root
+-- traverse the left sub tree i.e. call preorder(left sub tree)
+-- traverse the right sub tree i.e. call preorder(right sub tree)
+Root->Left->Right
+
+2) In-order
+algo:
+-- traverse the left sub tree i.e. call in-order(left sub tree)
+-- visit the root
+--traverse the right sub tree i.e. call in-order(right sub tree)
+Left->Root->Right
+
+3) postorder
+algo:
+-- traverse the left sub tree i.e. call postorder(left sub tree)
+--traverse the right sub tree i.e. call postorder(right sub tree)
+-- visit the root
+Left->right->Root
+
+Breadth first traversal:
+-- Breadth first traversal of a tree prints all the nodes of a tree level by level.
+-- Breadth first traversal is also called as level order traversal.
 
